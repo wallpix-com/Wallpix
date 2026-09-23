@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="WallPix — beautiful wallpapers and photography marketplace"><title>{{title or "WallPix"}}</title><link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"></head><body>
+<header><a class="brand" href="/">Wall<span>Pix</span></a><nav><a href="/">Explore</a><a href="/#categories">Categories</a>{% if owner %}<a class="ownerlink" href="/admin">Owner</a>{% endif %}{% if user or owner %}<a href="/logout">Logout</a>{% else %}<a href="/login">Login</a><a class="btn small" href="/register">Join</a>{% endif %}</nav></header>
+{% with m=get_flashed_messages() %}{% if m %}<div class="toast">{{m[0]}}</div>{% endif %}{% endwith %}{% block content %}{% endblock %}
+<footer><b>Wall<span>Pix</span></b><p>Beautiful wallpapers. Original photography. Global creators.</p></footer></body></html>

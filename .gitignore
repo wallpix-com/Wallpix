@@ -1,0 +1,5 @@
+wallpix.db
+__pycache__/
+app_broken_backup.py
+static/uploads/
+.env
